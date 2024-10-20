@@ -2,7 +2,7 @@ var express = require("express");
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
 let dotenv = require("dotenv").config();
 
-const uri = `mongodb+srv://waseem:waseem12@cluster0.5zygy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
+const uri = `mongodb+srv://waseem:${process.env.MONGO_PASSWORD}@cluster0.5zygy.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
 var router = express.Router();
 const Joi = require("joi");
 const bcrypt = require("bcrypt");
